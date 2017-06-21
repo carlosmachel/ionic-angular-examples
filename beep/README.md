@@ -1,26 +1,20 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Projeto Beep 
 
-## How to use this template
+Aprendendo a fazer aplicações em ionic 3 do Paul Haliday.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Para aplicação funcionar você precisa de um arquivo chamado `app.firebase.config.ts` que possui as configurações do seu firebase. Como é segredo eu não subi.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+O arquivo fica basicamente assim:
 
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+```
+export const FIREBASE_CONFIG = {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
+  };
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Essas informações você pega na pagina do firebase da sua aplicação.
