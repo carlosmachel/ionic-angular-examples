@@ -4,12 +4,12 @@ import { Account } from '../../models/account/account.interface';
 import { LoginResponse } from '../../models/login/login-response.interface';
 
 @Injectable()
-export class AuthProvider {
+export class AuthService {
 
   constructor(private afAuth: AngularFireAuth) {    
   }
 
-  async createUserWithEmailAndPassword(account) {
+  async createUserWithEmailAndPassword(account: Account) {
     try {
       return <LoginResponse> {
         result: await this.afAuth.auth.createUserWithEmailAndPassword(account.email, account.password)

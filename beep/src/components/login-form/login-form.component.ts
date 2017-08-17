@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import {NavController } from 'ionic-angular';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { NavController } from 'ionic-angular';
 
 import { Account } from '../../models/account/account.interface';
 import { LoginResponse } from "../../models/login/login-response.interface";
-import { AuthProvider } from '../../providers/auth/auth.service';
+import { AuthService } from '../../providers/auth/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -12,10 +11,10 @@ import { AuthProvider } from '../../providers/auth/auth.service';
 })
 export class LoginFormComponent {
 
-  account = {} as Account;
+  account = {email: 'teste@teste.com.br', password: 'teste1234'} as Account;
   @Output() loginStatus: EventEmitter<LoginResponse>;
 
-  constructor(private auth: AuthProvider, private navCtrl: NavController) {
+  constructor(private auth: AuthService, private navCtrl: NavController) {
     this.loginStatus = new EventEmitter<LoginResponse>();
   }
 

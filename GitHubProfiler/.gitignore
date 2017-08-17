@@ -32,3 +32,8 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+
+#Exclude .js and .js.map
+**/*/*.js.map
+**/*/*.js

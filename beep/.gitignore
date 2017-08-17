@@ -33,4 +33,5 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
+# Don't upload the firebase configuration
 app.firebase.config.ts

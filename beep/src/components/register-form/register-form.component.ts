@@ -1,8 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
-import {AuthProvider} from '../../providers/auth/auth.service';
-
-import {Account } from '../../models/account/account.interface';
+import { AuthService } from '../../providers/auth/auth.service';
+import { Account } from '../../models/account/account.interface';
 import { LoginResponse } from '../../models/login/login-response.interface';
 
 @Component({
@@ -15,7 +13,7 @@ export class RegisterFormComponent {
 
   @Output() registerStatus: EventEmitter<LoginResponse>;
 
-  constructor(private auth: AuthProvider) {    
+  constructor(private auth: AuthService) {    
     this.registerStatus = new EventEmitter<LoginResponse>();
   }
 
