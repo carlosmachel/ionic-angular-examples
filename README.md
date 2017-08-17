@@ -24,3 +24,5 @@ Remove the `back` button after the user logged in.
 ```ts
 this.navCtrl.setRoot('Inbox');
 ```
+
+Naming convetion for observable is `authenticatedUser$` this dollar sign at the end.
