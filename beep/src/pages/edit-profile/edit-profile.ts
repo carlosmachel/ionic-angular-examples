@@ -11,6 +11,10 @@ export class EditProfilePage {
   constructor(private navCtrl: NavController, private navParams: NavParams) {
   }
 
+  saveProfileResult(event : Boolean) {
+    event ? this.navCtrl.setRoot('TabsPage') : console.log('Not authenticated or saved.');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditProfilePage');
   }
